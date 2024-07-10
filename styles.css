@@ -1,0 +1,103 @@
+/* Reset some default styles */
+body, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* General body styling */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #eaeaea; /* Light grey background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container styling */
+.game-container {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Header styling */
+h1 {
+    color: #333333; /* Dark grey */
+    margin-bottom: 20px;
+}
+
+/* Game status styling */
+.status {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+/* Game board styling */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Cell styling */
+.square {
+    background-color: #1e90ff; /* Blue */
+    border: 2px solid #ffffff; /* White border */
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffffff; /* White text */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.square:hover {
+    background-color: #1c6ea4; /* Darker blue */
+}
+
+.square.player-x {
+    color: #e74c3c; /* Red for player X */
+}
+
+.square.player-o {
+    color: #2ecc71; /* Green for player O */
+}
+
+/* Restart button styling */
+.reset {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745; /* Green */
+    color: #ffffff; /* White */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset:hover {
+    background-color: #218838; /* Darker green */
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .square {
+        width: 80px;
+        height: 80px;
+    }
+}
